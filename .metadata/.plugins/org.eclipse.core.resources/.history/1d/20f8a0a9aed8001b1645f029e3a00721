@@ -1,0 +1,20 @@
+package udpPractice;
+
+import java.net.*;
+import java.util.*;
+
+public class UdpSendingPractice {
+	public static void main(String[] args) {
+				DatagramSocket	udpSocket	= null;
+		final 	InetAddress		ADDRESS		= InetAddress.getByName("192.168.200.182");
+		final	int				PORT		= 59595;
+		try {
+			udpSocket	= new DatagramSocket(PORT, ADDRESS);
+			DatagramPacket	packet	= new DatagramPacket(null, port, address, port);
+		} catch (IOException e) {
+			
+		} finally {
+			udpSocket.close();
+		}
+	}
+}

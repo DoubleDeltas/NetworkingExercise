@@ -1,0 +1,33 @@
+package udpPractice;
+
+import java.net.*;
+import java.util.*;
+
+public class UdpSendingPractice {
+	
+	
+	public static void main(String[] args) {
+		final 	InetAddress		ADDRESS		= InetAddress.getByName("192.168.200.182");
+		final	int				PORT		= 59595;
+		final	String			MACADDR		= "B4:2E:99:EF:97:6C";
+		final	int				MAGIC_PACKET_LEN	= 102;
+				DatagramSocket	udpSocket	= null;
+		try {
+			udpSocket	= new DatagramSocket(PORT, ADDRESS);
+			
+			String[]	words		= MACADDR.split(":");
+			byte[]		macAddress 	= new byte[6];
+			for (int i = 0; i < 6; i++)
+				macAddress[i] = (byte)Integer.parseInt(words[i], 16);
+			byte[]	buffer = new byte[102];
+			for (int i = 0; i < 6)
+			
+			
+			DatagramPacket	packet	= new DatagramPacket(null, port, address, port);
+		} catch (IOException e) {
+			
+		} finally {
+			udpSocket.close();
+		}
+	}
+}
