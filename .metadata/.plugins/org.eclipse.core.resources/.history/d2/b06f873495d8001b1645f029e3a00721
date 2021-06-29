@@ -1,0 +1,25 @@
+package networkingPractice;
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+public class ClientEx {
+	public static void main(String[] args) {
+		Socket socket = null;
+		try {
+			socket = new Socket("localhost", 59595);
+		}
+		catch (IOException e) {
+			
+		}
+		finally {
+			try {
+				socket.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

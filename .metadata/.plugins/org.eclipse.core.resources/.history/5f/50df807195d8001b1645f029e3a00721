@@ -1,0 +1,28 @@
+package networkingPractice;
+
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
+public class ClientEx {
+	public static void main(String[] args) {
+		BufferedReader	in		= null;
+		BufferedWriter	out		= null;
+		Socket			socket	= null;
+		Scanner			scanner	= new Scanner(System.in);
+		try {
+			socket	= new Socket("localhost", 59595);
+			in		= new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			out		= new BufferedReader(new OutputStreamWriter(socket.getOutputStream()));
+		} catch (IOException e) {
+			
+		} finally {
+			try {
+				socket.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}

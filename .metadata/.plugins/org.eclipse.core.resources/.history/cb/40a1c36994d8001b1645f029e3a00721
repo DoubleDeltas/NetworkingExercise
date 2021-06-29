@@ -1,0 +1,15 @@
+package networkingPractice;
+
+import java.net.Socket;
+
+public class ClientEx {
+	public static void main(String[] args) {
+		Socket socket;
+		try {
+			socket = new Socket("localhost", 59595);
+		}
+		catch (IOException e) {
+			
+		}
+	}
+}

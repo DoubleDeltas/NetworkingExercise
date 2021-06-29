@@ -1,0 +1,9 @@
+package networkingPractice;
+
+import java.net.Socket;
+
+public class Main {
+	public static void main(String[] args) {
+		Socket clientSocket = new Socket("localhost", 59595);
+	}
+}
